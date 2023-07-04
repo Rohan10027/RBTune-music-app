@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.black_btn{
+    padding-top: 0.375rem;
+    padding-bottom: 0.375rem; 
+    padding-left: 1.25rem;
+    padding-right: 1.25rem; 
+    background-color: #000000; 
+    transition-property: all; 
+    color: #ffffff; 
+    font-size: 0.875rem;
+    line-height: 1.25rem; 
+    border-radius: 9999px; 
+    border-width: 1px; 
+    border-color: #000000; 
+}
+
+.black_btn :hover{
+    background-color: #0F0E26; 
+    color: red; 
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+body{
+    background-color: #FFAE42;
+    background-image: linear-gradient(orange, yellow, orange);
+}
+
+nav{
+    font-family: 'Ubuntu', sans-serif;
+    top: 0;
+}
+
+nav > ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    /* ki bindu bindu na dikhe */
+    height: 65px;
+    background-color: #0F0E26;
+    color: white;
+}
+
+nav ul li{
+    padding: 0 12px;
+    /* top down 0px and right left 12px */
+    cursor:pointer;
+    transition: all 1s ease;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+}
+nav ul :hover{
+    color: #3DCFD3;
+}
+.brand img{
+    width: 60px;
+    padding: 0 3px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container{
+    min-height: 72vh;
+    background-color: #0F0E26;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    margin: 23px auto;
+    width: 70%;
+    border-radius: 15px;
+    padding: 25px;
+    overflow:auto;
+    background-attachment:local;
+    overflow-y: scroll;
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
+.songItemContainer{
+    margin-top: 74px;
+}
+.songList{
+    z-index: 1;
+    width: 800px;
+    height: 450px;
+    background-attachment: scroll;
+}
+
+.banner{
+    z-index: 1;
+}
+.container .songBanner{
+    margin-left: -200px;
+    width: 700px;
+    height: 450px;
+    z-index: 0;
+    background-attachment: local;
+    /* overflow: auto; */
+}
+
+.bottom{
+    position: sticky;
+    height: 130px;
+    bottom: 0;
+    color: white;
+    background-color: #0F0E26;
+    display: flex;
+    /* we make flexbox as align progressbar to centre */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* we do as all img will be below range */
+    z-index: 2;
+    background-attachment:scroll;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem;
+    margin-right: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+.icons i{
+    cursor: pointer;
+    color: red;
+    height: 50px;
+    margin: 5px;
+}
+
+#myProgressBar{
+    margin-top: 2%;
+    width: 80vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.songItemContainer{
+    margin-top: 74px;
+}
+
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: white;
+    /* width: 80%; */
+    color: #0F0E26;
+    margin: 12px 0px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.songItem:hover{
+    background-color: rgb(230, 247, 192);
+}
+
+.songItem img{
+    width: 46px;
+    margin: 0 20px;
+    border-radius: 34px;
+}
+
+.songItemPlay:hover{
+    color: red;
+}
+
+.timestamp{
+    margin: 0 15px;
+}
+
+.timestamp i{
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Varela Round', sans-serif;
+    /* z-index: 3; */
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+
+@media only screen and (max-width: 360px) {
+    body {
+      background-color: red;
+    }
+    .songName{
+        /* padding: 15px; */
+        padding-top: 5%;
+    }
+    .songInfo{
+        margin-top: -50px;
+    }
+    .songInfo :hover{
+        color: #3DCFD3;
+    }
+  }
